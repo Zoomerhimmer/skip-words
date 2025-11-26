@@ -51,7 +51,7 @@ parser = argparse.ArgumentParser(
         description='Skip words are words that are found when one skips a fixed count of letters within a document. This program looks for word matches between a dictionary and a document.',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument('file', help='The document to find skip-words in.')
-parser.add_argument('-d', '--dictionary', help='The dictionary of words to match, one line per word. This program does not conduct any extra permutations, so if inflected forms are desired they will need to be listed separately. If a dictionary is not given the program will bootstrap a list from the document to be analyzed.')
+parser.add_argument('-d', '--dictionary', help='The dictionary of words to match, one line per word. This program does not conduct any extra permutations, so if inflected forms are desired they will need to be listed separately. If a dictionary file is not given the program will bootstrap a list from the document to be analyzed.')
 parser.add_argument('-r', '--range', nargs='+', action='extend', type=int, required=True, help='Enter the number of letters to skip. If desired you may enter a range: the second number will be the skip-count the program ends on incrementally and inclusively.')
 parser.add_argument('-s', '--start', type=int, default=0, help='Start counting from this letter onwards. The first letter is 0.')
 parser.add_argument('-b', '--backwards', action='store_true', default=False, help='Start counting at the end of the document and go backwards.')
