@@ -55,7 +55,7 @@ parser.add_argument('-r', '--range', nargs='+', action='extend', type=int, requi
 parser.add_argument('-s', '--start', type=int, default=0, help='Start counting from this letter onwards. The first letter is 0.')
 parser.add_argument('-b', '--backwards', action='store_true', default=False, help='Start counting at the end of the document and go backwards.')
 parser.add_argument('-c', '--backwise', action='store_true', default=False, help='Reverse dictionary terms when matching.')
-parser.add_argument('-p', '--punctuation', default='!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~«»', help='A string of language specific characters to remove in addition to the whitespace.')
+parser.add_argument('-p', '--punctuation', default='!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~«»”“—’', help='A string of language specific characters to remove in addition to the whitespace.')
 parser.add_argument('-n', '--numbers', action='store_true', default=False, help='Removes numbers from the document. Helpful to remove verse numbers.')
 parser.add_argument('-q', '--quiet', action='store_true', default=False, help='Do not show words that did not find a match. Speeds up the program significantly.')
 args = parser.parse_args()
